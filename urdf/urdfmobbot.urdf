@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdfmobbot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000773317767015506 -0.000114531181035347 -0.00317692371280239"
+        rpy="0 0 0" />
+      <mass
+        value="0.202861353375854" />
+      <inertia
+        ixx="0.000288055973269891"
+        ixy="-1.30741671371134E-07"
+        ixz="1.23053449675078E-07"
+        iyy="0.000536268984258025"
+        iyz="3.09222277595825E-08"
+        izz="0.000823461008906858" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="linkfrontleft">
+    <inertial>
+      <origin
+        xyz="-0.0048677720729928 1.00390112889315E-10 -0.00919906935736476"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145542102257425" />
+      <inertia
+        ixx="1.09550256894123E-06"
+        ixy="-4.99025634574917E-15"
+        ixz="-1.38605292642386E-07"
+        iyy="8.15088209063035E-07"
+        iyz="-1.43312156169351E-13"
+        izz="1.39418606238892E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontleft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontleft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frontleftjoint"
+    type="continuous">
+    <origin
+      xyz="-0.082648 -0.059083 -0.00675"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkfrontleft" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkfrontleftwheel">
+    <inertial>
+      <origin
+        xyz="0 -3.46944695195361E-18 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00860106805645203" />
+      <inertia
+        ixx="5.60947696052157E-07"
+        ixy="9.50162228653394E-24"
+        ixz="-7.7223000552084E-23"
+        iyy="5.60947696052157E-07"
+        iyz="3.500872934864E-25"
+        izz="8.70566474812719E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontleftwheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontleftwheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frontleftwheeljoint"
+    type="continuous">
+    <origin
+      xyz="-0.0115 -5E-05 -0.01975"
+      rpy="1.5708 0 0" />
+    <parent
+      link="linkfrontleft" />
+    <child
+      link="linkfrontleftwheel" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkfrontright">
+    <inertial>
+      <origin
+        xyz="0.00486777207299277 -1.0039017533936E-10 -0.00919906935736476"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145542102257424" />
+      <inertia
+        ixx="1.09550256894122E-06"
+        ixy="-4.99025782368981E-15"
+        ixz="1.38605292642383E-07"
+        iyy="8.15088209063027E-07"
+        iyz="1.4331215764902E-13"
+        izz="1.39418606238891E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontright.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontright.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frontrightjoint"
+    type="continuous">
+    <origin
+      xyz="-0.082648 0.058917 -0.00675"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkfrontright" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkfrontrightwheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00860106805645204" />
+      <inertia
+        ixx="5.60947696052158E-07"
+        ixy="-3.53597693973163E-23"
+        ixz="7.43612262403867E-23"
+        iyy="8.70566474812721E-07"
+        iyz="-4.14001923954543E-24"
+        izz="5.60947696052158E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontrightwheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkfrontrightwheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frontrightwheeljoint"
+    type="continuous">
+    <origin
+      xyz="0.0115 5E-05 -0.01975"
+      rpy="0 0 3.1416" />
+    <parent
+      link="linkfrontright" />
+    <child
+      link="linkfrontrightwheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkrearleft">
+    <inertial>
+      <origin
+        xyz="-0.00486777207299281 1.00390057378164E-10 -0.00919906935736476"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145542102257424" />
+      <inertia
+        ixx="1.09550256894122E-06"
+        ixy="-4.99026194646806E-15"
+        ixz="-1.38605292642384E-07"
+        iyy="8.15088209063028E-07"
+        iyz="-1.43312160218769E-13"
+        izz="1.39418606238891E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearleft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearleft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rearleftjoint"
+    type="continuous">
+    <origin
+      xyz="0.081352 -0.059083 -0.00675"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkrearleft" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkrearleftwheel">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 1.38777878078145E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00860106805645203" />
+      <inertia
+        ixx="5.60947696052157E-07"
+        ixy="-5.32150628315138E-23"
+        ixz="3.92273393370754E-23"
+        iyy="8.70566474812719E-07"
+        iyz="-8.89159863609013E-24"
+        izz="5.60947696052157E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearleftwheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearleftwheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rearleftwheeljoint"
+    type="continuous">
+    <origin
+      xyz="-0.0115 -5E-05 -0.01975"
+      rpy="0 0 0" />
+    <parent
+      link="linkrearleft" />
+    <child
+      link="linkrearleftwheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkrearright">
+    <inertial>
+      <origin
+        xyz="-0.00486777207299283 1.00390126767103E-10 -0.00919906935736477"
+        rpy="0 0 0" />
+      <mass
+        value="0.0145542102257425" />
+      <inertia
+        ixx="1.09550256894122E-06"
+        ixy="-4.99025241353307E-15"
+        ixz="-1.38605292642387E-07"
+        iyy="8.15088209063038E-07"
+        iyz="-1.43312152558793E-13"
+        izz="1.39418606238892E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearright.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearright.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rearrightjoint"
+    type="continuous">
+    <origin
+      xyz="0.081352 0.058917 -0.00675"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkrearright" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="linkrearrightwheel">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 6.93889390390723E-18 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00860106805645204" />
+      <inertia
+        ixx="5.60947696052157E-07"
+        ixy="-7.00820505565363E-23"
+        ixz="4.04732553623973E-23"
+        iyy="8.7056647481272E-07"
+        iyz="4.32566611903724E-24"
+        izz="5.60947696052157E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearrightwheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdfmobbot/meshes/linkrearrightwheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rearrightwheeljoint"
+    type="continuous">
+    <origin
+      xyz="-0.0115 -5E-05 -0.01975"
+      rpy="0 0 0" />
+    <parent
+      link="linkrearright" />
+    <child
+      link="linkrearrightwheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>
